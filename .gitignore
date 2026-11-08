@@ -39,3 +39,4 @@ dist-ssr
 
 # Local secrets
 .dev.vars
+supabase/.temp/

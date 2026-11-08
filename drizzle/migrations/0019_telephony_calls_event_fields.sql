@@ -1,0 +1,1 @@
+ALTER TABLE public.telephony_calls ADD COLUMN IF NOT EXISTS ref_id text, ADD COLUMN IF NOT EXISTS recording_url text, ADD COLUMN IF NOT EXISTS hangup_cause text, ADD COLUMN IF NOT EXISTS last_event text;

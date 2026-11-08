@@ -1,0 +1,1 @@
+UPDATE public.seo_pages SET label = 'Udyam Adhar' WHERE slug = 'udyam-adhar-2';

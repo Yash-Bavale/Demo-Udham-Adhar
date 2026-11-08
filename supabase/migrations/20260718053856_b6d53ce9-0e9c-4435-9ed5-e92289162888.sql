@@ -1,0 +1,10 @@
+ALTER TYPE public.fulfillment_status_enum ADD VALUE IF NOT EXISTS 'form_not_submitted';
+ALTER TYPE public.fulfillment_status_enum ADD VALUE IF NOT EXISTS 'form_submitted';
+ALTER TYPE public.fulfillment_status_enum ADD VALUE IF NOT EXISTS 'technical_delay';
+ALTER TYPE public.fulfillment_status_enum ADD VALUE IF NOT EXISTS 'customer_delay';
+ALTER TYPE public.fulfillment_status_enum ADD VALUE IF NOT EXISTS 'consultation_completed';
+ALTER TYPE public.fulfillment_status_enum ADD VALUE IF NOT EXISTS 'awaiting_govt';
+ALTER TYPE public.fulfillment_status_enum ADD VALUE IF NOT EXISTS 'order_completed';
+ALTER TYPE public.fulfillment_status_enum ADD VALUE IF NOT EXISTS 'certificate_rejected';
+ALTER TYPE public.fulfillment_status_enum ADD VALUE IF NOT EXISTS 'ticket_open';
+ALTER TYPE public.fulfillment_status_enum ADD VALUE IF NOT EXISTS 'order_closed';

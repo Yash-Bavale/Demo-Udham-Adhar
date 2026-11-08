@@ -1,0 +1,1 @@
+ALTER TYPE public.workflow_reminder_kind ADD VALUE IF NOT EXISTS 'internal_review';

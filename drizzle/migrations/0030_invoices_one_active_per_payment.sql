@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX IF NOT EXISTS uq_invoices_active_payment ON public.invoices (payment_id) WHERE cancelled_at IS NULL AND payment_id IS NOT NULL;

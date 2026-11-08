@@ -1,0 +1,1 @@
+UPDATE public.seo_pages SET label = 'Udhar Aadhar Registration Online' WHERE slug = 'udhar-aadhar-registration';

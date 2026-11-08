@@ -1,0 +1,2 @@
+ALTER TABLE public.payments ADD COLUMN IF NOT EXISTS return_nonce_hash text;
+CREATE INDEX IF NOT EXISTS payments_return_nonce_hash_idx ON public.payments (return_nonce_hash) WHERE return_nonce_hash IS NOT NULL;

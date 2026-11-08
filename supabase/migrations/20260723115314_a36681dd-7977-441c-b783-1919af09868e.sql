@@ -1,0 +1,1 @@
+ALTER TABLE public.follow_ups ADD COLUMN IF NOT EXISTS reason_note TEXT;

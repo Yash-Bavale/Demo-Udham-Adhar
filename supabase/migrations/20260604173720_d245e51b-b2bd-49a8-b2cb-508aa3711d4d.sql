@@ -1,0 +1,1 @@
+UPDATE public.service_form_schemas SET is_active = false WHERE is_active = true;

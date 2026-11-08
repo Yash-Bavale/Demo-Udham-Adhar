@@ -1,0 +1,1 @@
+UPDATE public.payment_gateways SET is_enabled = true, priority = 20, updated_at = now() WHERE name = 'ccavenue';

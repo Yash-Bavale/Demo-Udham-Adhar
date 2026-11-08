@@ -1,0 +1,25 @@
+ALTER TABLE public.app_settings
+  ADD COLUMN IF NOT EXISTS alert_sound_tone text DEFAULT 'chime',
+  ADD COLUMN IF NOT EXISTS custom_audio_url text,
+  ADD COLUMN IF NOT EXISTS custom_audio_name text,
+  ADD COLUMN IF NOT EXISTS alert_sound_volume numeric DEFAULT 0.8,
+  ADD COLUMN IF NOT EXISTS alert_sound_enabled boolean DEFAULT true,
+  ADD COLUMN IF NOT EXISTS desktop_notifications boolean DEFAULT true,
+  ADD COLUMN IF NOT EXISTS leads_sound_enabled boolean DEFAULT true,
+  ADD COLUMN IF NOT EXISTS orders_sound_enabled boolean DEFAULT true,
+  ADD COLUMN IF NOT EXISTS leads_toast_enabled boolean DEFAULT true,
+  ADD COLUMN IF NOT EXISTS orders_toast_enabled boolean DEFAULT true,
+  ADD COLUMN IF NOT EXISTS leads_ringtone text DEFAULT 'chime',
+  ADD COLUMN IF NOT EXISTS leads_custom_url text,
+  ADD COLUMN IF NOT EXISTS leads_custom_name text,
+  ADD COLUMN IF NOT EXISTS orders_ringtone text DEFAULT 'bell',
+  ADD COLUMN IF NOT EXISTS orders_custom_url text,
+  ADD COLUMN IF NOT EXISTS orders_custom_name text;
+ALTER TABLE public.profiles
+  ADD COLUMN IF NOT EXISTS avatar_url text,
+  ADD COLUMN IF NOT EXISTS employment_status text NOT NULL DEFAULT 'ACTIVE',
+  ADD COLUMN IF NOT EXISTS auto_assign_enabled boolean NOT NULL DEFAULT false,
+  ADD COLUMN IF NOT EXISTS max_workload integer NOT NULL DEFAULT 50,
+  ADD COLUMN IF NOT EXISTS work_schedule jsonb DEFAULT '{"days":[1,2,3,4,5,6],"start_time":"09:30","end_time":"18:30","timezone":"Asia/Kolkata"}'::jsonb,
+  ADD COLUMN IF NOT EXISTS archived_at timestamptz,
+  ADD COLUMN IF NOT EXISTS terminated_at timestamptz;

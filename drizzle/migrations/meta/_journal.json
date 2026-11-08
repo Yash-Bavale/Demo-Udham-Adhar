@@ -1,0 +1,349 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1789470162086,
+      "tag": "0000_add_email_provider_setting",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1789470570968,
+      "tag": "0001_email_dupe_guard_and_app_settings_rls",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1790053955940,
+      "tag": "0002_add_is_hot_to_applications",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1790312346535,
+      "tag": "0003_email_ingestion_pipeline_v2",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1790320225041,
+      "tag": "0004_repair_operational_kpi_queues_all_time",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1790320484037,
+      "tag": "0005_repair_orders_v3_payment_enum_values",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1790320534897,
+      "tag": "0006_repair_orders_v3_plain_payment_enum_values",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1790320569844,
+      "tag": "0007_repair_orders_v3_empty_enum_comparisons",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1790320594659,
+      "tag": "0008_repair_orders_v3_refund_status_comparison",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1790320623175,
+      "tag": "0009_normalize_orders_v3_statuses_to_text",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1790320716545,
+      "tag": "0010_repair_orders_v3_closure_none_stage",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1790321045063,
+      "tag": "0011_make_operational_order_queues_all_time",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "7",
+      "when": 1790324800000,
+      "tag": "0012_repair_completed_closed_event_dates",
+      "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "7",
+      "when": 1790744861349,
+      "tag": "0013_perf_fk_indexes_and_cron_retention",
+      "breakpoints": true
+    },
+    {
+      "idx": 14,
+      "version": "7",
+      "when": 1790747138175,
+      "tag": "0014_retention_notifications_emails_analytics",
+      "breakpoints": true
+    },
+    {
+      "idx": 15,
+      "version": "7",
+      "when": 1790747186822,
+      "tag": "0015_prune_sent_email_bodies_empty_string",
+      "breakpoints": true
+    },
+    {
+      "idx": 16,
+      "version": "7",
+      "when": 1790748072486,
+      "tag": "0016_disable_sent_email_body_pruning",
+      "breakpoints": true
+    },
+    {
+      "idx": 17,
+      "version": "7",
+      "when": 1790830055499,
+      "tag": "0017_add_smartflo_agent_id_to_profiles",
+      "breakpoints": true
+    },
+    {
+      "idx": 18,
+      "version": "7",
+      "when": 1790839228708,
+      "tag": "0018_telephony_calls",
+      "breakpoints": true
+    },
+    {
+      "idx": 19,
+      "version": "7",
+      "when": 1790840629559,
+      "tag": "0019_telephony_calls_event_fields",
+      "breakpoints": true
+    },
+    {
+      "idx": 20,
+      "version": "7",
+      "when": 1790868448347,
+      "tag": "0020_dispute_evidence_records",
+      "breakpoints": true
+    },
+    {
+      "idx": 21,
+      "version": "7",
+      "when": 1791019050415,
+      "tag": "0021_canonical_employee_performance",
+      "breakpoints": true
+    },
+    {
+      "idx": 22,
+      "version": "7",
+      "when": 1791019303832,
+      "tag": "0022_perf_stream_stable_order",
+      "breakpoints": true
+    },
+    {
+      "idx": 23,
+      "version": "7",
+      "when": 1791021819951,
+      "tag": "0023_atomic_order_assignment",
+      "breakpoints": true
+    },
+    {
+      "idx": 24,
+      "version": "7",
+      "when": 1791274208750,
+      "tag": "0024_create_order_action_logs",
+      "breakpoints": true
+    },
+    {
+      "idx": 25,
+      "version": "7",
+      "when": 1791274333130,
+      "tag": "0025_employee_auth_sessions_security",
+      "breakpoints": true
+    },
+    {
+      "idx": 26,
+      "version": "7",
+      "when": 1791274464411,
+      "tag": "0026_reindex_bloated_notifications",
+      "breakpoints": true
+    },
+    {
+      "idx": 27,
+      "version": "7",
+      "when": 1791275312324,
+      "tag": "0027_fast_lead_attribution",
+      "breakpoints": true
+    },
+    {
+      "idx": 28,
+      "version": "7",
+      "when": 1791279029259,
+      "tag": "0028_orders_perf_indexes",
+      "breakpoints": true
+    },
+    {
+      "idx": 29,
+      "version": "7",
+      "when": 1791288851470,
+      "tag": "0029_invoice_cancellation_columns",
+      "breakpoints": true
+    },
+    {
+      "idx": 30,
+      "version": "7",
+      "when": 1791288905130,
+      "tag": "0030_invoices_one_active_per_payment",
+      "breakpoints": true
+    },
+    {
+      "idx": 31,
+      "version": "7",
+      "when": 1791351605013,
+      "tag": "0031_migration",
+      "breakpoints": true
+    },
+    {
+      "idx": 32,
+      "version": "7",
+      "when": 1791351733973,
+      "tag": "0032_migration",
+      "breakpoints": true
+    },
+    {
+      "idx": 33,
+      "version": "7",
+      "when": 1791607033943,
+      "tag": "0033_add_missing_profile_and_sound_columns",
+      "breakpoints": true
+    },
+    {
+      "idx": 34,
+      "version": "7",
+      "when": 1792731506457,
+      "tag": "0034_callerdesk_ivr_drafts",
+      "breakpoints": true
+    },
+    {
+      "idx": 35,
+      "version": "7",
+      "when": 1792740650329,
+      "tag": "0035_employee_telephony_accounts",
+      "breakpoints": true
+    },
+    {
+      "idx": 36,
+      "version": "7",
+      "when": 1792816473690,
+      "tag": "0036_telephony_wrapup_fields",
+      "breakpoints": true
+    },
+    {
+      "idx": 37,
+      "version": "7",
+      "when": 1792909262359,
+      "tag": "0037_active_profile_role_gate",
+      "breakpoints": true
+    },
+    {
+      "idx": 38,
+      "version": "7",
+      "when": 1792990119950,
+      "tag": "0038_support_ticket_folders_and_stars",
+      "breakpoints": true
+    },
+    {
+      "idx": 39,
+      "version": "7",
+      "when": 1792990242975,
+      "tag": "0039_lock_support_folder_items",
+      "breakpoints": true
+    },
+    {
+      "idx": 40,
+      "version": "7",
+      "when": 1792991428987,
+      "tag": "0040_customer_access_tokens",
+      "breakpoints": true
+    },
+    {
+      "idx": 41,
+      "version": "7",
+      "when": 1792992851333,
+      "tag": "0041_payments_return_origin",
+      "breakpoints": true
+    },
+    {
+      "idx": 42,
+      "version": "7",
+      "when": 1792992993789,
+      "tag": "0042_payments_return_nonce",
+      "breakpoints": true
+    },
+    {
+      "idx": 43,
+      "version": "7",
+      "when": 1792998324390,
+      "tag": "0043_lead_public_ref",
+      "breakpoints": true
+    },
+    {
+      "idx": 44,
+      "version": "7",
+      "when": 1793011969786,
+      "tag": "0044_cashfree_merchant_accounts",
+      "breakpoints": true
+    },
+    {
+      "idx": 45,
+      "version": "7",
+      "when": 1793084425406,
+      "tag": "0045_website_payment_gateways",
+      "breakpoints": true
+    },
+    {
+      "idx": 46,
+      "version": "7",
+      "when": 1793163160229,
+      "tag": "0046_cashfree_account_credentials",
+      "breakpoints": true
+    },
+    {
+      "idx": 47,
+      "version": "7",
+      "when": 1793772656039,
+      "tag": "0047_website_payments_enabled",
+      "breakpoints": true
+    },
+    {
+      "idx": 48,
+      "version": "7",
+      "when": 1793784117835,
+      "tag": "0048_reset_ap_2026_019683_after_service_change",
+      "breakpoints": true
+    }
+  ]
+}

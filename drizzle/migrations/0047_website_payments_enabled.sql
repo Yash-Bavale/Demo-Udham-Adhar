@@ -1,0 +1,1 @@
+ALTER TABLE public.websites ADD COLUMN IF NOT EXISTS payments_enabled boolean NOT NULL DEFAULT true;

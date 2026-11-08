@@ -1,0 +1,164 @@
+{
+  "version": 1,
+  "sdk_version": "0.24.0",
+  "path": "/mcp",
+  "auth": {
+    "type": "oauth",
+    "issuer": "https://mrcmgfkyqyslvbsfkgtw.supabase.co/auth/v1",
+    "accepted_audiences": [
+      "authenticated"
+    ]
+  },
+  "mcp": {
+    "server": {
+      "name": "udyam-ops-mcp",
+      "version": "0.1.0",
+      "title": "Udyam Ops CRM"
+    },
+    "tools": [
+      {
+        "name": "search_leads",
+        "title": "Search leads",
+        "description": "Search CRM leads by name, email, mobile or lead code, optionally filtered by status. Returns the most recent matches.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "query": {
+              "description": "Free text: name, email, mobile or lead code.",
+              "type": "string"
+            },
+            "status": {
+              "description": "Lead status filter, e.g. new_lead, contacted.",
+              "type": "string"
+            },
+            "limit": {
+              "description": "Max rows (default 20).",
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 50
+            }
+          }
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_lead",
+        "title": "Get lead details",
+        "description": "Fetch one CRM lead by its UUID or lead code, including its linked orders (applications).",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "lead": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Lead UUID or lead code (e.g. LD-1024)."
+            }
+          },
+          "required": [
+            "lead"
+          ]
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_orders",
+        "title": "List orders",
+        "description": "List recent orders (applications), optionally filtered by order status or fulfillment stage.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "status": {
+              "description": "Application status, e.g. awaiting_payment, paid.",
+              "type": "string"
+            },
+            "fulfillment_status": {
+              "description": "Fulfillment stage, e.g. order_received.",
+              "type": "string"
+            },
+            "limit": {
+              "description": "Max rows (default 20).",
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 50
+            }
+          }
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_order",
+        "title": "Get order details",
+        "description": "Fetch one order (application) by UUID or application code, with its lead details.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "order": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Order UUID or application code."
+            }
+          },
+          "required": [
+            "order"
+          ]
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "add_lead_note",
+        "title": "Add a note to a lead",
+        "description": "Append a timestamped internal note to a lead's remarks. Does not change lead status.",
+        "annotations": {
+          "readOnlyHint": false,
+          "destructiveHint": false,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "lead_id": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Lead UUID."
+            },
+            "note": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Note text to append."
+            }
+          },
+          "required": [
+            "lead_id",
+            "note"
+          ]
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}

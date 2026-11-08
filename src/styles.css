@@ -1,0 +1,389 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Brand-specific (Udyam Adhar) */
+  --color-brand-red: var(--brand-red);
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-navy-deep: var(--brand-navy-deep);
+  --color-brand-gold: var(--brand-gold);
+  --color-nav-bg: var(--nav-bg);
+  --color-disclaimer-bg: var(--disclaimer-bg);
+  --color-form-header: var(--form-header);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+
+  /* BHS premium palette (Part A) */
+  --color-bhs-navy: var(--bhs-navy);
+  --color-bhs-gold: var(--bhs-gold);
+  --color-bhs-cream: var(--bhs-cream);
+  --color-status-new: var(--status-new);
+  --color-status-process: var(--status-process);
+  --color-status-done: var(--status-done);
+  --color-status-urgent: var(--status-urgent);
+  --color-status-docs: var(--status-docs);
+  --color-admin-surface: var(--admin-surface);
+  --color-admin-surface-2: var(--admin-surface-2);
+  --color-admin-border: var(--admin-border);
+  --color-admin-border-strong: var(--admin-border-strong);
+  --color-admin-fg: var(--admin-fg);
+  --color-admin-fg-muted: var(--admin-fg-muted);
+  --color-admin-primary: var(--admin-primary);
+  --color-admin-accent-soft: var(--admin-accent-soft);
+  --color-admin-success: var(--admin-success);
+  --color-admin-warn: var(--admin-warn);
+  --color-admin-danger: var(--admin-danger);
+  --color-completion-primary: var(--completion-primary);
+  --color-completion-soft: var(--completion-soft);
+  --color-completion-border: var(--completion-border);
+}
+
+:root {
+  --radius: 0.5rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.18 0.02 260);
+
+  /* Brand palette — pulled from udyamadhar.in */
+  --brand-red: oklch(0.515 0.215 27); /* #b91c1c-ish logo red */
+  --brand-navy: #1A4171;
+  --brand-navy-deep: #1A4171;
+  --brand-gold: oklch(0.73 0.16 75); /* #d99a18-ish menu gold */
+  --nav-bg: oklch(0.94 0.025 244); /* light blue strip */
+  --disclaimer-bg: oklch(0.38 0.1 251); /* mid-dark blue marquee */
+  --form-header: #1A4171;
+
+  /* BHS premium tokens (Part A — Final_CRM spec) */
+  --bhs-navy:    #0F1F3D;
+  --bhs-gold:    #C9973A;
+  --bhs-cream:   #FAF8F4;
+  --status-new:     #3B82F6;
+  --status-process: #F59E0B;
+  --status-done:    #10B981;
+  --status-urgent:  #EF4444;
+  --status-docs:    #8B5CF6;
+
+  --primary: var(--brand-navy);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.96 0.01 248);
+  --secondary-foreground: oklch(0.2 0.04 264);
+  --muted: oklch(0.97 0.005 248);
+  --muted-foreground: oklch(0.5 0.03 257);
+  --accent: oklch(0.95 0.02 244);
+  --accent-foreground: var(--brand-navy);
+  --destructive: oklch(0.577 0.245 27);
+  --destructive-foreground: oklch(1 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.02 260);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.02 260);
+  --border: oklch(0.9 0.01 255);
+  --input: oklch(0.93 0.01 255);
+  --ring: var(--brand-navy);
+
+  --font-display: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body: "Open Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Admin surfaces — Udyam Ops OS flat design system */
+  --admin-bg: #F8FAFC;
+  --admin-surface: #FFFFFF;
+  --admin-surface-2: #EFF6FC;
+  --admin-surface-3: #E2ECF5;
+  --admin-border: #E2E8F0;
+  --admin-border-strong: #CBD5E1;
+  --admin-fg: #0F172A;
+  --admin-fg-muted: #64748B;
+  --admin-fg-subtle: #94A3B8;
+  --admin-sidebar: #FFFFFF;
+  --admin-sidebar-fg: #0F172A;
+  --admin-sidebar-muted: #64748B;
+  --admin-primary: #1F4E79;
+  --admin-accent: #2E75B6;
+  --admin-accent-fg: #FFFFFF;
+  --admin-accent-soft: #EFF6FC;
+  --admin-success: #16A34A;
+  --admin-warn: #D97706;
+  --admin-danger: #DC2626;
+  --completion-primary: #463AD6;
+  --completion-soft: #F3F1FF;
+  --completion-border: #DDD9FF;
+  --admin-info: #2E75B6;
+  /* Flat — gradient tokens aliased to solids so legacy primitives stay coherent */
+  --gradient-admin: #1F4E79;
+  --gradient-success: #16A34A;
+  --gradient-warn: #D97706;
+  --gradient-danger: #DC2626;
+  --shadow-admin: none;
+  --admin-radius: 0.5rem;
+
+  /* Glassmorphism (kept for non-admin chrome) */
+  --glass-bg: color-mix(in oklab, var(--admin-surface) 70%, transparent);
+  --glass-border: color-mix(in oklab, var(--admin-border) 60%, transparent);
+  --glass-blur: 16px;
+  --glass-shadow: 0 8px 32px -12px oklch(0.4 0.08 260 / 0.25);
+}
+
+.dark {
+  --background: oklch(0.16 0.02 260);
+  --foreground: oklch(0.96 0.005 250);
+  --card: oklch(0.2 0.02 260);
+  --card-foreground: oklch(0.96 0.005 250);
+  --popover: oklch(0.2 0.02 260);
+  --popover-foreground: oklch(0.96 0.005 250);
+  --primary: oklch(0.72 0.17 268);
+  --primary-foreground: oklch(0.12 0.02 260);
+  --secondary: oklch(0.25 0.02 260);
+  --secondary-foreground: oklch(0.96 0.005 250);
+  --muted: oklch(0.24 0.02 260);
+  --muted-foreground: oklch(0.68 0.02 255);
+  --accent: oklch(0.28 0.04 260);
+  --accent-foreground: oklch(0.96 0.005 250);
+  --border: oklch(0.3 0.02 260);
+  --input: oklch(0.28 0.02 260);
+  --ring: oklch(0.72 0.17 268);
+
+  /* Admin dark mode — flat */
+  --admin-bg: #0B1220;
+  --admin-surface: #111827;
+  --admin-surface-2: #1F2937;
+  --admin-surface-3: #273244;
+  --admin-border: #243044;
+  --admin-border-strong: #334155;
+  --admin-fg: #F1F5F9;
+  --admin-fg-muted: #94A3B8;
+  --admin-fg-subtle: #64748B;
+  --admin-sidebar: #0F172A;
+  --admin-sidebar-fg: #F1F5F9;
+  --admin-sidebar-muted: #94A3B8;
+  --admin-primary: #2E75B6;
+  --admin-accent: #60A5FA;
+  --admin-accent-fg: #0B1220;
+  --admin-accent-soft: rgba(96, 165, 250, 0.14);
+  --admin-success: #22C55E;
+  --admin-warn: #F59E0B;
+  --admin-danger: #EF4444;
+  --completion-primary: #A9A1FF;
+  --completion-soft: #272446;
+  --completion-border: #514B83;
+  --admin-info: #60A5FA;
+  --gradient-admin: #2E75B6;
+  --gradient-success: #22C55E;
+  --gradient-warn: #F59E0B;
+  --gradient-danger: #EF4444;
+  --shadow-admin: none;
+
+  --glass-bg: color-mix(in oklab, var(--admin-surface) 60%, transparent);
+  --glass-border: color-mix(in oklab, var(--admin-border) 70%, transparent);
+  --glass-shadow: 0 8px 32px -12px oklch(0 0 0 / 0.6);
+}
+
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur)) saturate(140%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(140%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html,
+  body {
+    font-family: var(--font-body);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--font-display);
+  }
+}
+
+/* Marquee for disclaimer bar — enters from the right edge on page load, scrolls left */
+@keyframes marquee {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.marquee-track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee 60s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Google Translate widget styling */
+.gtranslate-host .goog-te-gadget {
+  font-family: inherit;
+  font-size: 0;
+  color: transparent;
+}
+
+.policy-prose h4,
+.policy-prose h4 * {
+  font-weight: 800 !important;
+}
+.gtranslate-host .goog-te-gadget .goog-te-combo {
+  margin: 0;
+  padding: 4px 8px;
+  border: 1px solid #1A4171;
+  border-radius: 6px;
+  background: #fff;
+  color: #1A4171;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.gtranslate-host .goog-te-gadget > span {
+  display: none;
+}
+body { top: 0 !important; }
+.skiptranslate iframe.goog-te-banner-frame { display: none !important; }
+
+/* react-day-picker v9 layout fix */
+.rdp-months {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+@media (max-width: 640px) {
+  .rdp-months {
+    flex-direction: column;
+  }
+}
+.rdp-month {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 260px;
+}
+.rdp-month_caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 2.25rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #0f172a;
+}
+.rdp-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+  padding: 0 0.25rem;
+}
+.rdp-button_next, .rdp-button_previous {
+  pointer-events: auto;
+  width: 1.75rem;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  color: #475569;
+  transition: all 0.15s ease;
+}
+.rdp-button_next:hover, .rdp-button_previous:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+.rdp-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.rdp-weekdays {
+  display: grid !important;
+  grid-template-columns: repeat(7, 1fr) !important;
+  margin-bottom: 0.25rem;
+}
+.rdp-weekday {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748b;
+  height: 2rem;
+  text-transform: uppercase;
+}
+.rdp-week {
+  display: grid !important;
+  grid-template-columns: repeat(7, 1fr) !important;
+  margin-top: 0.25rem;
+}
+.rdp-day {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  margin: 0 auto;
+}
+.rdp-day_button {
+  width: 2.25rem !important;
+  height: 2.25rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 0.5rem !important;
+  font-size: 0.8125rem !important;
+  font-weight: 600 !important;
+  transition: all 0.15s ease;
+}
+/* ── Scrollbar utilities for nowrap overflow rows ─────────────────────── */
+/* Hides scrollbar visually while keeping scroll functionality */
+.scrollbar-none {
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;             /* Chrome/Safari/Opera */
+}

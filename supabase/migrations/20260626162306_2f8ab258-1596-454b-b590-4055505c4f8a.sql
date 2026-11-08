@@ -1,0 +1,1 @@
+UPDATE public.seo_pages SET enabled = false WHERE slug IN ('forgot-udyam','forgot-udyam-registration-number','forgot-udyam-certificate','forgot-udyam-no','forgot-udyam-number','forgot-udyam-aadhar','forgot-udyam-registration-certificate');

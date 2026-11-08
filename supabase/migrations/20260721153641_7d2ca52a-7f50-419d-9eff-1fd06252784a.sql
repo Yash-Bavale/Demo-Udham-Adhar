@@ -1,0 +1,1 @@
+UPDATE public.applications SET fulfillment_status='customer_delay', customer_hold_started_at=COALESCE(customer_hold_started_at, now()) WHERE application_code='AP-2026-007409';

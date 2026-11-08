@@ -1,0 +1,1 @@
+UPDATE public.seo_pages SET enabled = false WHERE slug IN ('aadhar-udyam-certificate','aadhar-udyam-print','download-udyam','download-udyam-aadhar','download-udyam-certificate-online');

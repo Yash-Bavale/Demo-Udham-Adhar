@@ -1,0 +1,1 @@
+UPDATE public.websites SET contentful_space_id = 'xn7rc3iqh7xq', contentful_delivery_token_secret = 'CONTENTFUL_API_KEY_1' WHERE domain = 'udyamregistrations.in';

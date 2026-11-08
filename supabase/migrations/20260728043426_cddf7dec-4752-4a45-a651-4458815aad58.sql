@@ -1,0 +1,1 @@
+DELETE FROM public.site_content_blocks WHERE block_key IN ('home.how_it_works', 'home.why_us', 'home.faqs');

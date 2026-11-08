@@ -1,0 +1,1 @@
+ALTER VIEW public.customer_stats SET (security_invoker = true);

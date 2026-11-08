@@ -1,0 +1,2 @@
+ALTER TABLE public.app_settings DROP CONSTRAINT IF EXISTS app_settings_minutes_range;
+ALTER TABLE public.app_settings ADD CONSTRAINT app_settings_minutes_range CHECK (customer_delay_autoclose_minutes >= 1 AND customer_delay_autoclose_minutes <= 10080);

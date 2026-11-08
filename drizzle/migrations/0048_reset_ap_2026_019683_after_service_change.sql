@@ -1,0 +1,2 @@
+UPDATE public.applications SET fulfillment_status='order_received', order_status='ORDER_RECEIVED', form_status='pending', form_submitted_at=NULL, customer_hold_started_at=NULL, technical_hold_started_at=NULL, workflow_delay_reason=NULL WHERE application_code='AP-2026-019683';
+UPDATE public.onboarding_submissions s SET status='draft', submitted_at=NULL FROM public.applications a WHERE a.application_code='AP-2026-019683' AND s.lead_id=a.lead_id;

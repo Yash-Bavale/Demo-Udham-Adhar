@@ -1,0 +1,1 @@
+UPDATE public.smtp_settings SET from_email = 'noreply@notify.mail.businesshelpservices.com', updated_at = now();

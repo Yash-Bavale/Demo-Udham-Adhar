@@ -1,0 +1,1 @@
+update public.payment_gateways set is_enabled = false, updated_at = now() where name = 'ccavenue';
